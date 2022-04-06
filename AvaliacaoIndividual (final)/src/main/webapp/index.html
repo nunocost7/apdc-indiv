@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type"
+	content="application/xhtml+xml; charset=UTF-8" />
+<title>ADC: Login & Registration</title>
+<body style="background-color: Thistle;">
+
+
+
+	<script>
+
+    var req = new XMLHttpRequest();
+
+	function registration() {
+        
+	
+		//TODO
+		req.open("POST", 'https://savvy-parser-344300.appspot.com/rest/register', true);
+
+		//Send the proper header information along with the request
+		req.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+		req.onreadystatechange = function() { // Call a function when the state changes.
+			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+				// Request finished. Do processing here.
+			}
+		}
+		req.send(JSON.stringify({
+			var Username = document.getElementById("Username").value,
+			var Email = document.getElementById("Email").value,
+			var Password = document.getElementById("Password").value,
+			var Repeat Password = document.getElementById("Repeat Password").value,
+			var Name = document.getElementById("Name").value,
+			
+			//optional data
+			var Profile = document.getElementById("Profile").value,
+			var Phone = document.getElementById("Phone").value,
+			var Mobile Phone = document.getElementById("Mobile Phone").value,
+			var Address =documenr.getElementById("Address").value, 
+			var NIF = document.getElementById("NIF").value
+		}));
+	}
+	funtion login(){
+		
+		req.open("GET", 'https://savvy-parser-344300.appspot.com/rest/login', true);
+
+req.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+req.onreadystatechange = function() { 
+	if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+	}
+}
+req.send(JSON.stringify({
+	var Username = document.getElementById("Username").value,
+	var Password = document.getElementById("Password").value,
+		
+	}
+</script>
+
+
+<body>
+
+	<table>
+		<tr>
+			<td colspan="2" style="font-weight: bold;">Login:</td>
+		</tr>
+		<tr>
+			<td>Username: <INPUT TYPE="text" ID="url" SIZE=60
+				PLACEHOLDER="Username"></td>
+		</tr>
+		<tr>
+			<td>Password: <INPUT TYPE="text" ID="url" SIZE=60
+				PLACEHOLDER="Password"></td>
+		</tr>
+	</table>
+	<INPUT TYPE="button" ID="button1" VALUE="Login" ONCLICK="login()">
+
+	<br>
+	<br>
+
+	<table>
+		<tr>
+			<td colspan="2" style="font-weight: bold;">Register:</td>
+		</tr>
+		<tr>
+			<td>Username: <INPUT TYPE="text" ID="username" SIZE=60
+				PLACEHOLDER="Username"></td>
+		</tr>
+		<tr>
+			<td>Email: <INPUT TYPE="text" ID="email" SIZE=60
+				PLACEHOLDER="Email"></td>
+		</tr>
+		<tr>
+
+			<td>Password: <INPUT TYPE="text" ID="password" SIZE=60
+				PLACEHOLDER="Password"></td>
+		</tr>
+		<tr>
+			<td>Repeat Password: <INPUT TYPE="text" ID="confirmation"
+				SIZE=60 PLACEHOLDER="Repeat Password"></td>
+		</tr>
+		<tr>
+			<td>Name: <INPUT TYPE="text" ID="name" SIZE=60
+				PLACEHOLDER="Name"></td>
+		</tr>
+		<tr>
+			<td>Profile: <INPUT TYPE="text" ID="profile" SIZE=60
+				PLACEHOLDER="Profile"></td>
+		</tr>
+		<tr>
+			<td>Phone: <INPUT TYPE="text" ID="telephone" SIZE=60
+				PLACEHOLDER="Phone"></td>
+		</tr>
+		<tr>
+			<td>Mobile Phone: <INPUT TYPE="text" ID="cellPhone" SIZE=60
+				PLACEHOLDER="Mobile Phone"></td>
+		</tr>
+		<tr>
+			<td>Address: <INPUT TYPE="text" ID="Address" SIZE=60
+				PLACEHOLDER="Address"></td>
+		</tr>
+		<tr>
+			<td>NIF: <INPUT TYPE="text" ID="NIF" SIZE=60 PLACEHOLDER="NIF"></td>
+		</tr>
+
+
+	</table>
+	<INPUT TYPE="button" ID="button1" VALUE="Registration"
+		ONCLICK="registration()">
+	<br>
+
+
+
+</body>
+</html>
